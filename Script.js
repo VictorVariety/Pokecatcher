@@ -19,10 +19,10 @@ let walkButton
 let bagButton
 let image = `<img src="Pics/pokemon.png"></img>`
 let anticipationMessages = [
-    'You hit it! <br> But will it be caught?',
-    'You pray for it to find peace in your balls',
-    'Mmmmyes? No..? Which is it?!',
-    'Come on, come ooon, come oooaaaaan!'
+    'You hit it! <br> But will you catch it?',
+    'You pray for it to find peace in your balls..',
+    'Mmmmyes? No..? Maybe?!',
+    'Come on, come ooon!'
 ]
 updateView()
 function updateView() {
@@ -165,7 +165,7 @@ function pokeballCatch() {
         updateView()
         setTimeout(() => {
             image = `<img src="Pics/grass.png"></img>`
-            gameMessage = 'You caught ' + rdmPokemon + ' <br> See if you to catch ' + wordNum(winCon) + ' more pokemon'
+            gameMessage = 'You caught ' + rdmPokemon + ' <br> See if you can catch ' + wordNum(winCon) + ' more pokemon'
             updateView()
             rdmPokemon = ''
         }, 2200)

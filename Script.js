@@ -115,7 +115,7 @@ function stone() {
     } else {
         catchFactor - 2;
         escapeFactor--;
-        image = `<img class="stoneAnimation" src="Pics/` + rdmPokemon + `.png"></img>`
+        image = `<img class="stoneAnimation" src="Pics/` + rdmPokemon.toLowerCase() + `.png"></img>`
     }
     updateView()
 }

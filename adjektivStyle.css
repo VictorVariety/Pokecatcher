@@ -1,0 +1,73 @@
+body {
+    background-color: rgb(154, 154, 154);
+    color: rgb(216, 216, 216);
+    font-size: x-large;
+    padding-left: 170px;
+    padding-right: 170px;
+    max-width: 1100px;
+    margin: 0 auto;
+
+}
+
+.basic-grid {
+    display: flex;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    /*cleaner code*/
+    grid-template-columns: repeat(4, autofit, minmax(260px, 1fr));
+    /*experiment with this*/
+}
+
+.storyClass {
+    text-align: center;
+    border: solid 4px;
+    border-color: rgb(85, 112, 135);
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 30px;
+    background-color: rgb(55, 55, 55);
+    animation: cardEntrance 1400ms ease-out;
+    animation-fill-mode: backwards;
+    border-radius: 50px 400px;
+    min-width: 430px;
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+    border: solid 4px;
+    border-color: rgb(85, 112, 135);
+    background-color: rgb(55, 55, 55);
+    justify-content: center;
+    flex-direction: column;
+    min-width: 110px;
+    cursor: pointer;
+    animation: cardEntrance 2800ms ease-out;
+    animation-fill-mode: backwards;
+}
+
+.words {
+    transition: color 0.2s linear;
+}
+
+.words:hover {
+    color: rgb(85, 112, 135);
+}
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+
+    }
+}

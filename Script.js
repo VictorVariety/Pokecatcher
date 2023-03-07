@@ -2,7 +2,7 @@
 let pokeballCount = 20
 let winCon = 7
 let rdmPokemon = ''
-let gameMessage = 'You get 20 pokeballs, and <big><b>∞</b></big> stones. <br> Stones will increase capture chances, <br> But it might scare the pokemon away. <br> Try to catch em all!'
+let gameMessage = 'You get 20 pokeballs, and <big><b>∞</b></big> stones. <br> Stones will increase capture chance <br> But it might scare the pokemon away. <br> Gotta Catch \'Em All!'
 let wildPokemon = ['Charmander', 'Squirtle', 'Bulbasaur', 'Gabite', 'Munchlax']
 let inventory = ['Pikachu']
 let showInventory
@@ -108,12 +108,12 @@ function walkInGrass() {
     updateView()
 }
 function stone() {
-    if (rdmGenCeil(4) == 4) {
+    if (rdmGenCeil(5) == 5) {
         gameMessage = rdmPokemon + ' escaped!'
         rdmPokemon = ''
         image = `<img src="Pics/grass.png"></img>`
     } else {
-        catchFactor - 2;
+        catchFactor - 3;
         escapeFactor--;
         image = `<img class="stoneAnimation" src="Pics/` + rdmPokemon.toLowerCase() + `.png"></img>`
     }

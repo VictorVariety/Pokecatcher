@@ -195,7 +195,7 @@ function pokeballEscape() {
 }
 function pokeballPop() {
     gameMessage = 'Aarh, ' + rdmPokemon + ' broke free <br> and is eyeballing you nervously'
-    image = `<img class="pokeballFailAnimation" src="Pics/` + rdmPokemon + `.png"></img>`
+    image = `<img class="pokeballFailAnimation" src="Pics/` + rdmPokemon.toLowerCase() + `.png"></img>`
     busyAction = !busyAction
     busyWorld = !busyWorld
     pokeballCount--
